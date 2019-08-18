@@ -1,0 +1,60 @@
+
+.gmail-tools {
+  display: flex;
+  align-items: center;
+  padding-left: 1.4rem;
+
+  &__item {
+    height: 4rem;
+    width: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+
+    &.square {
+      width: 3rem;
+      border-radius: 0.4rem;
+      margin-right: 0;
+    }
+
+    &.caret {
+      border-radius: 0.4rem;
+      width: 2rem;
+      margin-left: -0.4rem;
+    }
+
+    &:hover {
+      background: #ccc;
+    }
+
+    .icon {
+      display: inline-flex;
+      font-size: 1.6rem;
+    }
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .gmail-pagin {
+    min-width: 80px;
+    outline: none;
+    color: #5f6368;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem 1.5rem;
+    border-radius: .4rem;
+    transition: all .3s ease-in-out;
+    margin: 0 0.5rem;
+
+    &:hover {
+      background: #ccc;
+      color: #333;
+    }
+  }
+}
+

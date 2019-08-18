@@ -1,0 +1,41 @@
+/*
+ * @Author: Rajkeshwar Prasad(rajkeshwar.pd@gmail.com) 
+ * @Date: 2019-08-17 21:30:56 
+ * @Last Modified by: Rajkeshwar Prasad
+ * @Last Modified time: 2019-08-18 18:36:07
+ */
+
+@import 'scss/resets';
+@import 'scss/gmail-header';
+@import 'scss/gmail-sidebar';
+@import 'scss/gmail-main-area';
+@import 'scss/gmail-tools';
+@import 'scss/gmail-content-right';
+@import 'scss/gmail-app';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  height: calc(100vh - 7rem);
+  
+  &__left {
+    flex-basis: 30rem;
+  }
+
+  &__middle {
+    flex: 1;
+    align-items: stretch;
+    background: #fff;
+  }
+
+  &__right {
+    padding: 1rem;
+    border-left: 1px solid #cccc;
+  }
+}

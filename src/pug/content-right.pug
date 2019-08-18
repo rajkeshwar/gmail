@@ -1,0 +1,19 @@
+
+mixin menu-list-item(iconClass)
+  .menu-list__item
+    span(class=iconClass)
+
+
+.menu-list.menu-list--vertical
+  +menu-list-item('icon icon--calendar')
+  +menu-list-item('icon icon--keep')
+  +menu-list-item('icon icon--tasks')
+  span.icon-separation
+  +menu-list-item('icon icon--plus')
+  .spacer
+
+  .menu-list__item
+    span(class='icon icon--angle-right')
+      svg(version="1.1" x="0px" y="0px" width="20px" height="20px" viewbox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#5F6368")
+        path(d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z")
+        path(fill="none" d="M0,0h24v24H0V0z")

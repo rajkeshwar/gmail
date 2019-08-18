@@ -1,0 +1,82 @@
+
+mixin gmail-list-item() 
+  .gmail-list
+
+    .gmail-list__check
+      i.far(class="fa-square")
+
+    .gmail-list__star
+      i.far(class="fa-star")
+
+    .gmail-list__sender HSBC Credit Card
+
+    .gmail-list__content
+      span.gmail-subject Endless rewards for. 
+      span.gmail-desc - Do not forward this email as its unique to you. Unsubscribe from this list
+    
+    .gmail-list__time 10:30 AM
+
+mixin gmail-tools-icon(iconClass, wprClass) 
+  .gmail-tools__item(class=wprClass)
+    i.icon(class=iconClass)
+
+mixin category-tabs-item(iconClass, label, pills, pillClass, desc, activeClass) 
+  .category-tabs__item
+    .category-tab(class=activeClass)
+      .category__icon
+        i(class=iconClass)
+      .category__box
+        .category--label(class=activeClass)
+          span.label= label
+          if pills
+            span.pills(class=pillClass)= pills
+        if desc
+          .category--desc= desc
+
+
+
+.gmail-tools
+  +gmail-tools-icon('far fa-square', 'square')
+  +gmail-tools-icon('fas fa-caret-down', 'caret')
+  +gmail-tools-icon('fas fa-redo')
+  +gmail-tools-icon('fas fa-ellipsis-v')
+  .spacer
+  .gmail-pagin
+    span.from 1-50 
+    span.of of 
+    span.to 56,200
+
+  +gmail-tools-icon('fas fa-angle-left')
+  +gmail-tools-icon('fas fa-angle-right')
+  +gmail-tools-icon('fas fa-cog')
+
+
+.gmail-table
+  .gmail-table__category
+    .category-tabs
+      +category-tabs-item('fas fa-chalkboard', 'Primary', '', '', '', 'active')
+      +category-tabs-item('fas fa-user-friends', 'Social', '3 new', 'pills--blue', 'Facebook')
+      +category-tabs-item('fas fa-tag', 'Promotions', '12 New', 'pills--green','Wish, Snapdeal Jobs')
+
+  .gmail-table__list
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()
+    +gmail-list-item()

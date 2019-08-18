@@ -1,0 +1,20 @@
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0; // 1
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #333;
+  background-color: #fafafa; // 2
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba(#000, 0); // 4
+}

@@ -1,0 +1,245 @@
+.sidebar {
+  background: #EEE;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 7rem);
+}
+
+.compose {
+  padding: 1.25rem;
+
+  &__button {
+    height: 4.8rem;
+    width: 14.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4.8rem;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: #3c4043;
+    display: inline-flex;
+    font-weight: 500;
+    padding: 0 24px 0 0;
+    text-transform: none;
+    line-height: 4.8rem;
+    box-sizing: border-box;
+
+    &::before {
+      background-image: url(https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 32px;
+      content: '';
+      display: block;
+      height: 48px;
+      min-width: 56px;
+    }
+  }
+}
+
+.sidebar-list {
+  
+  &__item {
+    padding-right: 2.5rem;
+  }
+}
+
+.menu {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: .75rem 2.8rem;
+  display: flex;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  font-weight: 300;
+  cursor: pointer;
+
+  &-icon {
+    display: inline-flex;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 2rem;
+    color: lighten(#333, 20%);
+  }
+
+  &-label {
+    flex: 1;
+  }
+  &-label,
+  &-count {
+    font-size: 1.4rem;
+    color: 202124;
+  }
+
+  &:hover {
+    background: #fff;
+  }
+
+  &--active {
+    background: #fff;
+    border: 1px solid #ccc;
+    font-weight: 500;
+  }
+}
+
+
+.user-bar {
+  border: 1px solid #ccc;
+  height: 5rem;
+  min-height: 50px;
+}
+
+@mixin user-icon($icon-size) {
+  height: $icon-size;
+  width: $icon-size;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #757575;
+
+  &:hover {
+    background: #ccc;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin: 0 1.6rem 0 2.4rem;
+  height: 100%;
+
+  &__logo {
+    position: relative;
+
+    &--pic {
+      padding-right: 8px;
+
+      img {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+      }
+    }
+
+    &--status {
+      position: absolute;
+      background: #35ac19;
+      display: inline-block;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      right: 3px;
+      bottom: 3px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex: 1;
+
+    .label {
+      color: #262626;
+      font-size: 1.3rem;
+      max-width: 7.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .caret {
+      color: #757575;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__addmore {
+    @include user-icon(3.2rem);
+    font-size: 1.4rem;
+  }
+}
+
+
+.contact-list {
+  flex: 1 1 auto;
+  padding: 0 1.6rem 0 1.6rem;
+  overflow: auto;
+
+  &__item {
+    height: 4.5rem;
+  }
+}
+
+.contact-list__item {
+  display: flex;
+  align-items: stretch;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background: #fafafa;
+    cursor: pointer;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+
+    img {
+      height: 28px;
+      width: 28px;
+      border-radius: 50%;
+    }
+  }
+    
+  .user {
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    margin: 0;
+
+    &--name {
+      font-size: 13px;
+      line-height: 17px;
+      font-weight: 500;
+    }
+
+    &--desc {
+      font-size: 11px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 19rem;
+    }
+  }
+    
+}
+
+
+
+.bottom-bar {
+  border: 1px solid #ccc;
+  height: 35px;
+}
+
+.bottom-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #757575;
+
+  &__item {
+    height: 33px;
+    width: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &:nth-child(2) {
+      box-shadow: inset 0 0 10px -3px rgba(#000, 0.3);
+      color: #333;
+    }
+  }
+}

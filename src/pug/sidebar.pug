@@ -1,0 +1,67 @@
+mixin menu-list-item(icon, label, count, activeCls)
+  .sidebar-list__item
+    .menu(class=activeCls)
+      span.menu-icon
+        i.fas(class=icon)
+      span.menu-label= label
+      span.menu-count= count
+
+.sidebar
+  .compose
+    .compose__button Compose
+
+  .sidebar__manu
+    .sidebar-list
+      +menu-list-item('fa-camera', 'Inbox', '51,123', 'menu--active')
+      +menu-list-item('fa-car-battery', 'Starred', '51,123')
+      +menu-list-item('fa-ambulance', 'Snoozed', '51,123')
+      +menu-list-item('fa-chess-bishop', 'Important', '51,123')
+      +menu-list-item('fa-clipboard-list', 'Sent', '51,123')
+
+  .user-bar
+    .user
+      .user__logo
+        .user__logo--pic
+          img(src="https://lh3.googleusercontent.com/a-/AAuE7mCaSpekdteUya_OiKOObU3rF3MAq8D9Beh747ly9A=s56-c-k-no", alt="Rajkeshwar")
+        .user__logo--status
+        
+      .user__label
+        span.label Rajkeshwar
+        span.caret
+          i.fas.fa-caret-down
+      
+      .user__addmore
+        i.fas.fa-plus
+
+  mixin contact-list-item()
+    .contact-list__item
+      .avatar
+        img(src="https://source.unsplash.com/random/40x40/", alt="")
+      .user
+        .user--name Bharti Choubey
+        .user--desc Still in Canada. Need to know one thing I will send you an email. thing I will send you an email 
+        
+  .contact-list
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+    +contact-list-item()
+
+  mixin bottom-menu-item(iconClass) 
+    .bottom-menu__item
+      i.fas(class=iconClass)
+
+  .bottom-bar
+    .bottom-menu
+      +bottom-menu-item('fa-user')
+      +bottom-menu-item('fa-comment-dots')
+      +bottom-menu-item('fa-phone-alt')
+
+    
+        

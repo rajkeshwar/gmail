@@ -1,0 +1,67 @@
+
+.menu-list {
+  display: flex;
+  height: calc(100vh - 8rem);
+  box-sizing: border-box;
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &__item {
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #c2dbff;
+    }
+
+    &:last-of-type {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.icon {
+  border-radius: 50%;
+  height: 2.4rem;
+  width: 2.4rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  user-select: none;
+
+  &--calendar {
+    background-image: url(https://www.gstatic.com/companion/icon_assets/calendar_2x.png);
+    
+  }
+
+  &--keep {
+    background-image: url(https://www.gstatic.com/companion/icon_assets/keep_2x.png);
+  }
+
+  &--tasks {
+    background-image: url(https://www.gstatic.com/companion/icon_assets/tasks2_2x.png);
+  }
+
+  &--plus {
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/add_grey600_24dp.png);
+  }
+}
+
+.icon-separation {
+  display: block;
+  border-top: 1px solid #ccc;
+  margin: 2rem 1rem 4rem;
+}
+
+.spacer {
+  flex: 1;
+}
